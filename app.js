@@ -199,9 +199,14 @@ Complete the exercise in the space below:
 
 
 function convertTemperature(temperature, scale) {
-    return 
+    if (scale === 'C') {
+    return temperature * 9 / 5 + 32;
+    } else if (scale === 'F') {
+        return (temperature - 32) * 5 / 9;
+    } else {
+        return "Invalid scale";
+    }
 }
-
 
 console.log('Exercise 8 Result:', convertTemperature(32, "C"));
 
@@ -224,5 +229,16 @@ Complete the exercise in the space below:
 */
 
 
+function basicCalculator(num1, num2, operation) {
+    if (operation === 'add') {
+        return num1 + num2;
+    } else if (operation === "subtract") {
+        return num1 - num2;
+    } else if (operation === "divide") {
+        return num1 / num2;
+    } else {
+        return "invalid operation";
+    }
+}
 
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
